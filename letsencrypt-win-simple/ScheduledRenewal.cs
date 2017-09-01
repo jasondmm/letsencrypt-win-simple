@@ -40,7 +40,8 @@ namespace LetsEncrypt.ACME.Simple
                 result.Binding.AlternativeNames = new List<string>();
             }
 
-            if (result.Binding.Plugin == null) {
+            if (result.Binding.Plugin == null)
+            {
                 Log.Error("Plugin {plugin} not found", result.Binding.PluginName);
                 return null;
             }
