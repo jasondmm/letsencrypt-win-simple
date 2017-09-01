@@ -27,7 +27,8 @@ namespace LetsEncrypt.ACME.Simple
         public string PluginName { get; set; } = "IIS";
         public Plugin Plugin => Plugins[PluginName];
 
-        public override string ToString() {
+        public override string ToString()
+        {
             var x = new StringBuilder();
             x.Append($"[{PluginName}] ");
             if (!AlternativeNames.Contains(Host))
